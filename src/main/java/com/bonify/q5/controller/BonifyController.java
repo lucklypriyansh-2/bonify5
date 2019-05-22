@@ -22,7 +22,7 @@ public class BonifyController {
 		bankIdentifierService.readcsvFromPath(filepath);
 	}
 
-	@GetMapping("csv/loadfromPath/{bankidentifier}")
+	@GetMapping("csv/{bankidentifier}")
 	public BankIdentifierModel readDBData(@PathVariable("bankidentifier") Long bankIdentifier) {
 		return bankIdentifierService.readDBData(bankIdentifier);
 	}
